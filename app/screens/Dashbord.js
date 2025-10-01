@@ -1,5 +1,3 @@
-
-
 import React, { useState, useCallback, useEffect, useRef } from "react";
 import {
   View, Text, FlatList, Image, TouchableOpacity, SafeAreaView,
@@ -8,6 +6,7 @@ import {
 import { useFocusEffect, useRoute } from "@react-navigation/native";
 import LinearGradient from "react-native-linear-gradient";
 import { ScaledSheet } from "react-native-size-matters";
+import * as Animatable from 'react-native-animatable';
 
 const Dashboard = ({ navigation }) => {
   const route = useRoute();
@@ -79,28 +78,7 @@ const Dashboard = ({ navigation }) => {
   );
   
 
-  // useFocusEffect(
-  //   useCallback(() => {
-  //     console.log('📦 use localFlag:', flagRef.current);
-  //     console.log('✅ use userId:', userId);
-  
-  //     if (flagRef.current === 1 && !hasFetchedFromFlag.current) {
-  //       fetchNotes().then(() => {
-  //         flagRef.current = 0;
-  //         console.log("🚀 Flag is now reset to:", flagRef.current);
-  //       });
-  //       hasFetchedFromFlag.current = true;
-  //     }
-  //   }, [route.key, userId]) // 👈 force new focus on route change
-  // );
 
-  // useEffect(() => {
-  //   if (route.params?.flag !== undefined) {
-  //     flagRef.current = route.params.flag;
-  //     console.log("🛠 FlagRef updated:", flagRef.current);
-  //     fetchNotes();
-  //   }
-  // }, [route.key, route.params?.flag]);
 
   const onRefresh = useCallback(() => {
     setRefreshing(true);
@@ -110,47 +88,51 @@ const Dashboard = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <LinearGradient colors={["#000", "#1a1a1a", "#333"]} style={styles.container}>
+        
+        {/* ✅ Static Header */}
         <View style={styles.headerRow}>
           <TouchableOpacity onPress={openDrawer}>
             <Image source={require("../images/NavIcon.png")} style={styles.backIcon} />
           </TouchableOpacity>
-
           <Text style={styles.title}>Communication</Text>
           <View style={styles.rightSpace} />
         </View>
-
-        {loading && !refreshing ? (
-          <ActivityIndicator size="large" color="#FDC034" style={styles.loader} />
-        ) : notes.length === 0 ? (
-          <View style={styles.noDataContainer}>
-            <Text style={styles.noDataText}>No Data Available</Text>
-          </View>
-        ) : (
-          <FlatList
-            data={notes}
-            keyExtractor={(item) => item.id.toString()}
-            renderItem={({ item }) => (
-              <TouchableOpacity
-                style={styles.card}
-                onPress={() => navigation.navigate("Documentation", { data: item, userId })}
-              >
-                <Text style={styles.cardTitle}>{item.admin}</Text>
-                <Text style={styles.cardDate}>{item.date}</Text>
-                <Text style={styles.cardDescription} numberOfLines={2}>
-                  {item.note}
-                </Text>
-              </TouchableOpacity>
-            )}
-            refreshControl={
-              <RefreshControl
-                refreshing={refreshing}
-                onRefresh={onRefresh}
-                colors={["#FDC034"]}
-                tintColor="#FDC034"
-              />
-            }
-          />
-        )}
+  
+        {/* ✅ Animated Content (everything except header) */}
+        <Animatable.View animation="fadeInUp" duration={600} delay={200} style={{ flex: 1 }}>
+          {loading && !refreshing ? (
+            <ActivityIndicator size="large" color="#FDC034" style={styles.loader} />
+          ) : notes.length === 0 ? (
+            <View style={styles.noDataContainer}>
+              <Text style={styles.noDataText}>No Data Available</Text>
+            </View>
+          ) : (
+            <FlatList
+              data={notes}
+              keyExtractor={(item) => item.id.toString()}
+              renderItem={({ item }) => (
+                <TouchableOpacity
+                  style={styles.card}
+                  onPress={() => navigation.navigate("Documentation", { data: item, userId })}
+                >
+                  <Text style={styles.cardTitle}>{item.admin}</Text>
+                  <Text style={styles.cardDate}>{item.date}</Text>
+                  <Text style={styles.cardDescription} numberOfLines={2}>
+                    {item.note}
+                  </Text>
+                </TouchableOpacity>
+              )}
+              refreshControl={
+                <RefreshControl
+                  refreshing={refreshing}
+                  onRefresh={onRefresh}
+                  colors={["#FDC034"]}
+                  tintColor="#FDC034"
+                />
+              }
+            />
+          )}
+        </Animatable.View>
       </LinearGradient>
     </SafeAreaView>
   );
@@ -161,6 +143,7 @@ const styles = ScaledSheet.create({
     flex: 1,
     backgroundColor: "#000",
     paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight || 20 : 0,
+    // paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
   container: {
     flex: 1,

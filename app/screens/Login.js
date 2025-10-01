@@ -13,8 +13,9 @@ import LinearGradient from "react-native-linear-gradient";
 import { StackActions } from "@react-navigation/native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { ScaledSheet,scale, verticalScale, moderateScale } from "react-native-size-matters";
+import { ScaledSheet, scale, verticalScale, moderateScale } from "react-native-size-matters";
 import DrawerNavigator from "../Navigation/DrawerNavigator";
+import * as Animatable from "react-native-animatable";
 
 
 // test@gmail.com
@@ -24,6 +25,9 @@ const Login = ({ navigation }) => {
 
   const [email, setEmail] = useState("test@gmail.com");
   const [password, setPassword] = useState("Se@rlcO2020!?!?");
+  //   const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
@@ -62,9 +66,8 @@ const Login = ({ navigation }) => {
           body: formData,
         }
       );
-
       const data = await response.json();
-
+      console.log('display login', data)
       if (data.status === "success") {
         setLoading(false);
         await AsyncStorage.setItem("userdetails", data.user_id.toString());
@@ -92,7 +95,12 @@ const Login = ({ navigation }) => {
         enableOnAndroid={true}
         keyboardShouldPersistTaps="handled"
       >
-        <View style={styles.innerContainer}>
+        <Animatable.View
+          animation="fadeInUp"
+          duration={600}
+          delay={300}
+          style={styles.innerContainer}
+        >
           <Image source={require("../images/serlogo.png")} style={styles.logo} />
           <Text style={styles.title}>Welcome Back!</Text>
 
@@ -129,7 +137,7 @@ const Login = ({ navigation }) => {
           <TouchableOpacity style={styles.button} onPress={handleLogin} disabled={loading}>
             {loading ? <ActivityIndicator size="small" color="#000" /> : <Text style={styles.buttonText}>Login</Text>}
           </TouchableOpacity>
-        </View>
+        </Animatable.View>
       </KeyboardAwareScrollView>
 
       <Modal
@@ -171,7 +179,9 @@ const styles = ScaledSheet.create({
   scrollContainer: {
     flexGrow: 1,
     justifyContent: "center",
-    padding: "18@ms",
+    paddingVertical: "18@ms",
+    paddingHorizontal: "15@ms",
+
   },
   innerContainer: {
     alignItems: "center",

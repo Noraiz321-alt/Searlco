@@ -11,6 +11,11 @@ import {
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { DrawerContentScrollView } from '@react-navigation/drawer';
 import { ScaledSheet } from 'react-native-size-matters';
+import AntDesign from "react-native-vector-icons/FontAwesome";
+
+
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
 
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -37,21 +42,39 @@ const CustomDrawerContent = (props) => {
             style={styles.logo}
           />
         </View>
-
         <TouchableOpacity
           onPress={() => {
-            props.navigation.navigate('Dashboard');
+            props.navigation.navigate('Sales');
           }}
           style={styles.menuItem}
         >
           <View style={styles.menuRow}>
-            <Image
+            {/* <Image
               source={require('../images/Communication.png')}
               style={styles.menuIcon}
-            />
+            /> */}
+            <AntDesign style={styles.menuIcon} name="line-chart" size={25} color="#FDC034" /> 
+            <Text style={styles.menuText}>Dashboard</Text>
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => {
+            props.navigation.navigate('Dashbord');
+          }}
+          style={styles.menuItem}
+        >
+          <View style={styles.menuRow}>
+          <AntDesign style={styles.menuIcon} name="comment" size={25} color="#FDC034" /> 
+          {/* <Icon style={styles.menuIcon} name="comment" size={30} color="#FDC034" /> */}
+            {/* <Image
+              source={require('../images/Communication.png')}
+              style={styles.menuIcon}
+            /> */}
             <Text style={styles.menuText}>Communication</Text>
           </View>
         </TouchableOpacity>
+        
 
         <View style={styles.logoutContainer}>
           <TouchableOpacity onPress={handleLogout} style={styles.menuItem}>
@@ -75,6 +98,7 @@ const styles = ScaledSheet.create({
   drawerContainer: {
     flex: 1,
   },
+  
   logoWrapper: {
     alignItems: 'center',
     marginBottom: '10@vs',

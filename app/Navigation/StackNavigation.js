@@ -7,6 +7,7 @@ import Login from '../screens/Login';
 import Dashbord from '../screens/Dashbord';
 import Documentation from '../screens/Documentation';
 import SplashScreen from "../screens/SplashScreen";
+// import Sales from "../screens/Sales";
 
 import DrawerNavigator from "./DrawerNavigator";
 
@@ -21,6 +22,7 @@ const StackNavigation = () => {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Documentation" component={Documentation} />
         <Stack.Screen name="DrawerNavigator" component={DrawerNavigator} />
+        {/* <Stack.Screen name="Sales" component={Sales} /> */}
       </Stack.Navigator>
    
      

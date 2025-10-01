@@ -11,10 +11,10 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		649F42043F43655551C0D994 /* libPods-Searlco_Communication.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 118656AD6650DA7B7BBD6F68 /* libPods-Searlco_Communication.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8E3C781BA87E817114FA3232 /* libPods-Searlco_Communication.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF9112AD62096057E7D8377 /* libPods-Searlco_Communication.a */; };
+		B0CCBE8552574955CF14B98F /* libPods-Searlco_Communication-Searlco_CommunicationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7FD20044D99BAB1C423395 /* libPods-Searlco_Communication-Searlco_CommunicationTests.a */; };
 		B45BD304CC5609031299F599 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 711F7497219E8235B40E22E3 /* PrivacyInfo.xcprivacy */; };
-		E7D50C38C439A6CEF110A16D /* libPods-Searlco_Communication-Searlco_CommunicationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E34B0AD3B05DCDDC1302DA96 /* libPods-Searlco_Communication-Searlco_CommunicationTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,21 +31,40 @@
 		00E356EE1AD99517003FC87E /* Searlco_CommunicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Searlco_CommunicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* Searlco_CommunicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Searlco_CommunicationTests.m; sourceTree = "<group>"; };
+		0C254BCCCC62E329D5788A48 /* Pods-Searlco_Communication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Searlco_Communication.debug.xcconfig"; path = "Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication.debug.xcconfig"; sourceTree = "<group>"; };
+		118656AD6650DA7B7BBD6F68 /* libPods-Searlco_Communication.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Searlco_Communication.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* Searlco_Communication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Searlco_Communication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Searlco_Communication/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Searlco_Communication/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Searlco_Communication/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Searlco_Communication/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Searlco_Communication/main.m; sourceTree = "<group>"; };
-		27E445E52BEC71B1300717C7 /* Pods-Searlco_Communication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Searlco_Communication.release.xcconfig"; path = "Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication.release.xcconfig"; sourceTree = "<group>"; };
-		6BBF60A526F1689891ABE374 /* Pods-Searlco_Communication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Searlco_Communication.debug.xcconfig"; path = "Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication.debug.xcconfig"; sourceTree = "<group>"; };
+		1F0786032E83F4B700F8C9A5 /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
+		1F0786042E83F4B700F8C9A5 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
+		1F0786052E83F4B700F8C9A5 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		1F0786062E83F4B700F8C9A5 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
+		1F0786072E83F4B700F8C9A5 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		1F0786082E83F4B700F8C9A5 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Brands.ttf; sourceTree = "<group>"; };
+		1F0786092E83F4B700F8C9A5 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
+		1F07860A2E83F4B700F8C9A5 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Solid.ttf; sourceTree = "<group>"; };
+		1F07860B2E83F4B700F8C9A5 /* FontAwesome6_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Brands.ttf; sourceTree = "<group>"; };
+		1F07860C2E83F4B700F8C9A5 /* FontAwesome6_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Regular.ttf; sourceTree = "<group>"; };
+		1F07860D2E83F4B700F8C9A5 /* FontAwesome6_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Solid.ttf; sourceTree = "<group>"; };
+		1F07860E2E83F4B700F8C9A5 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
+		1F07860F2E83F4B700F8C9A5 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
+		1F0786102E83F4B700F8C9A5 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		1F0786112E83F4B700F8C9A5 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
+		1F0786122E83F4B700F8C9A5 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		1F0786132E83F4B700F8C9A5 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
+		1F0786142E83F4B700F8C9A5 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
+		1F0786152E83F4B700F8C9A5 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
 		711F7497219E8235B40E22E3 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Searlco_Communication/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Searlco_Communication/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B85F9D27D4DC5DC1F6FC6824 /* Pods-Searlco_Communication-Searlco_CommunicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Searlco_Communication-Searlco_CommunicationTests.debug.xcconfig"; path = "Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BAF9112AD62096057E7D8377 /* libPods-Searlco_Communication.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Searlco_Communication.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E34B0AD3B05DCDDC1302DA96 /* libPods-Searlco_Communication-Searlco_CommunicationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Searlco_Communication-Searlco_CommunicationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E522DD4B39D75A719BAE664 /* Pods-Searlco_Communication-Searlco_CommunicationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Searlco_Communication-Searlco_CommunicationTests.release.xcconfig"; path = "Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests.release.xcconfig"; sourceTree = "<group>"; };
+		C952BB6B03B55770E444509D /* Pods-Searlco_Communication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Searlco_Communication.release.xcconfig"; path = "Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication.release.xcconfig"; sourceTree = "<group>"; };
+		CD7FD20044D99BAB1C423395 /* libPods-Searlco_Communication-Searlco_CommunicationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Searlco_Communication-Searlco_CommunicationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB76AE4E46A3F09052A8D475 /* Pods-Searlco_Communication-Searlco_CommunicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Searlco_Communication-Searlco_CommunicationTests.debug.xcconfig"; path = "Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F72DE47FFB21934141BBA7D4 /* Pods-Searlco_Communication-Searlco_CommunicationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Searlco_Communication-Searlco_CommunicationTests.release.xcconfig"; path = "Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7D50C38C439A6CEF110A16D /* libPods-Searlco_Communication-Searlco_CommunicationTests.a in Frameworks */,
+				B0CCBE8552574955CF14B98F /* libPods-Searlco_Communication-Searlco_CommunicationTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E3C781BA87E817114FA3232 /* libPods-Searlco_Communication.a in Frameworks */,
+				649F42043F43655551C0D994 /* libPods-Searlco_Communication.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +118,38 @@
 			name = Searlco_Communication;
 			sourceTree = "<group>";
 		};
+		1F0786162E83F4B700F8C9A5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1F0786032E83F4B700F8C9A5 /* AntDesign.ttf */,
+				1F0786042E83F4B700F8C9A5 /* Entypo.ttf */,
+				1F0786052E83F4B700F8C9A5 /* EvilIcons.ttf */,
+				1F0786062E83F4B700F8C9A5 /* Feather.ttf */,
+				1F0786072E83F4B700F8C9A5 /* FontAwesome.ttf */,
+				1F0786082E83F4B700F8C9A5 /* FontAwesome5_Brands.ttf */,
+				1F0786092E83F4B700F8C9A5 /* FontAwesome5_Regular.ttf */,
+				1F07860A2E83F4B700F8C9A5 /* FontAwesome5_Solid.ttf */,
+				1F07860B2E83F4B700F8C9A5 /* FontAwesome6_Brands.ttf */,
+				1F07860C2E83F4B700F8C9A5 /* FontAwesome6_Regular.ttf */,
+				1F07860D2E83F4B700F8C9A5 /* FontAwesome6_Solid.ttf */,
+				1F07860E2E83F4B700F8C9A5 /* Fontisto.ttf */,
+				1F07860F2E83F4B700F8C9A5 /* Foundation.ttf */,
+				1F0786102E83F4B700F8C9A5 /* Ionicons.ttf */,
+				1F0786112E83F4B700F8C9A5 /* MaterialCommunityIcons.ttf */,
+				1F0786122E83F4B700F8C9A5 /* MaterialIcons.ttf */,
+				1F0786132E83F4B700F8C9A5 /* Octicons.ttf */,
+				1F0786142E83F4B700F8C9A5 /* SimpleLineIcons.ttf */,
+				1F0786152E83F4B700F8C9A5 /* Zocial.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				BAF9112AD62096057E7D8377 /* libPods-Searlco_Communication.a */,
-				E34B0AD3B05DCDDC1302DA96 /* libPods-Searlco_Communication-Searlco_CommunicationTests.a */,
+				118656AD6650DA7B7BBD6F68 /* libPods-Searlco_Communication.a */,
+				CD7FD20044D99BAB1C423395 /* libPods-Searlco_Communication-Searlco_CommunicationTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,6 +164,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				1F0786162E83F4B700F8C9A5 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* Searlco_Communication */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* Searlco_CommunicationTests */,
@@ -143,10 +189,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6BBF60A526F1689891ABE374 /* Pods-Searlco_Communication.debug.xcconfig */,
-				27E445E52BEC71B1300717C7 /* Pods-Searlco_Communication.release.xcconfig */,
-				B85F9D27D4DC5DC1F6FC6824 /* Pods-Searlco_Communication-Searlco_CommunicationTests.debug.xcconfig */,
-				F72DE47FFB21934141BBA7D4 /* Pods-Searlco_Communication-Searlco_CommunicationTests.release.xcconfig */,
+				0C254BCCCC62E329D5788A48 /* Pods-Searlco_Communication.debug.xcconfig */,
+				C952BB6B03B55770E444509D /* Pods-Searlco_Communication.release.xcconfig */,
+				DB76AE4E46A3F09052A8D475 /* Pods-Searlco_Communication-Searlco_CommunicationTests.debug.xcconfig */,
+				9E522DD4B39D75A719BAE664 /* Pods-Searlco_Communication-Searlco_CommunicationTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -158,12 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "Searlco_CommunicationTests" */;
 			buildPhases = (
-				70637CB108A58D093BDD8C17 /* [CP] Check Pods Manifest.lock */,
+				D956EBF9558DFF90728EFA65 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				E396DE21A0B5697573248121 /* [CP] Embed Pods Frameworks */,
-				6DFB1EDE32E10C7B7578CE74 /* [CP] Copy Pods Resources */,
+				24A74155DBA449F996CF648D /* [CP] Embed Pods Frameworks */,
+				93C8F748E1BC2A2221218A0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,14 +225,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Searlco_Communication" */;
 			buildPhases = (
-				159EB1B1E5EF3EA0E7E97A09 /* [CP] Check Pods Manifest.lock */,
+				9D142C2F8BD75FE93E65A6DD /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				E79572F7E15B419814B81A79 /* [CP] Embed Pods Frameworks */,
-				78B09EB7F10EF83644BC7D8F /* [CP] Copy Pods Resources */,
+				A208BFD7C4061656246D7D97 /* [CP] Embed Pods Frameworks */,
+				013E90CEAF16AD799A67B0AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,7 +316,58 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		159EB1B1E5EF3EA0E7E97A09 /* [CP] Check Pods Manifest.lock */ = {
+		013E90CEAF16AD799A67B0AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24A74155DBA449F996CF648D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93C8F748E1BC2A2221218A0E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D142C2F8BD75FE93E65A6DD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,24 +389,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6DFB1EDE32E10C7B7578CE74 /* [CP] Copy Pods Resources */ = {
+		A208BFD7C4061656246D7D97 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		70637CB108A58D093BDD8C17 /* [CP] Check Pods Manifest.lock */ = {
+		D956EBF9558DFF90728EFA65 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -329,57 +426,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		78B09EB7F10EF83644BC7D8F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E396DE21A0B5697573248121 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication-Searlco_CommunicationTests/Pods-Searlco_Communication-Searlco_CommunicationTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E79572F7E15B419814B81A79 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Searlco_Communication/Pods-Searlco_Communication-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -434,7 +480,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B85F9D27D4DC5DC1F6FC6824 /* Pods-Searlco_Communication-Searlco_CommunicationTests.debug.xcconfig */;
+			baseConfigurationReference = DB76AE4E46A3F09052A8D475 /* Pods-Searlco_Communication-Searlco_CommunicationTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -461,7 +507,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F72DE47FFB21934141BBA7D4 /* Pods-Searlco_Communication-Searlco_CommunicationTests.release.xcconfig */;
+			baseConfigurationReference = 9E522DD4B39D75A719BAE664 /* Pods-Searlco_Communication-Searlco_CommunicationTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -485,7 +531,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6BBF60A526F1689891ABE374 /* Pods-Searlco_Communication.debug.xcconfig */;
+			baseConfigurationReference = 0C254BCCCC62E329D5788A48 /* Pods-Searlco_Communication.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -498,7 +544,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3;
+				MARKETING_VERSION = 4;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -514,7 +560,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27E445E52BEC71B1300717C7 /* Pods-Searlco_Communication.release.xcconfig */;
+			baseConfigurationReference = C952BB6B03B55770E444509D /* Pods-Searlco_Communication.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -526,7 +572,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3;
+				MARKETING_VERSION = 4;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -544,7 +590,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_CXX_STANDARD_LIBRARY_HARDENING = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -612,6 +658,7 @@
 				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				USE_HERMES = true;
 			};
 			name = Debug;
 		};
@@ -620,7 +667,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_CXX_STANDARD_LIBRARY_HARDENING = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -683,6 +730,7 @@
 				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

@@ -35,7 +35,7 @@ export default function SplashScreen({ navigation }) {
         <LinearGradient colors={["#000", "#1a1a1a", "#333"]} style={styles.container}>
             {/* Animated Logo */}
             <Animatable.Image
-                animation="slideInDown"
+                animation="fadeInUp"
                 duration={2000}
                 source={require("../images/serlogo.png")}
                 style={styles.logo}

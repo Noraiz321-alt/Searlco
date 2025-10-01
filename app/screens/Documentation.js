@@ -12,6 +12,7 @@ import {
   TouchableOpacity,
   Modal,
 } from "react-native";
+import * as Animatable from 'react-native-animatable';
 import LinearGradient from "react-native-linear-gradient";
 import { ScaledSheet, scale, verticalScale, moderateScale } from "react-native-size-matters";
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
@@ -23,8 +24,8 @@ const Documentation = ({ navigation, route }) => {
 
   const adminId = data?.id;
 
-  console.log('admin id',adminId)
-  console.log('show userid ',userId)
+  console.log('admin id', adminId)
+  console.log('show userid ', userId)
 
   const [replyText, setReplyText] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
@@ -44,8 +45,8 @@ const Documentation = ({ navigation, route }) => {
     formData.append("admin_id", adminId);
     formData.append("note", replyText);
 
-    
-    console.log('bdjvbdf',formData)
+
+    console.log('bdjvbdf', formData)
 
     try {
       const response = await fetch("https://searlco.xyz/email_filter/remoteAPIs/add_note.php", {
@@ -54,6 +55,7 @@ const Documentation = ({ navigation, route }) => {
       });
 
       const result = await response.json();
+      console.log("API Response:>>>>>>>", result);
 
       if (result.status === "success") {
         setModalMessage("Reply submitted successfully!");
@@ -75,88 +77,94 @@ const Documentation = ({ navigation, route }) => {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-        <KeyboardAwareScrollView
-    contentContainerStyle={styles.keyboardAwareContainer}
-    enableOnAndroid={true}
-    keyboardShouldPersistTaps="handled"
-    extraScrollHeight={20}
-  >
+    <KeyboardAwareScrollView
+      contentContainerStyle={styles.keyboardAwareContainer}
+      enableOnAndroid={true}
+      keyboardShouldPersistTaps="handled"
+      extraScrollHeight={20}
+    >
       <LinearGradient colors={["#000", "#1a1a1a", "#333"]} style={styles.container}>
+  
+        {/* ✅ Static Header */}
         <View style={styles.headerRow}>
           <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
             <Image source={require("../images/left-arrow.png")} style={styles.backIcon} />
           </TouchableOpacity>
-
+  
           <View style={styles.logoContainer}>
             <Image source={require("../images/serlogo.png")} style={styles.logo} />
           </View>
-
+  
           <TouchableOpacity style={styles.backButton} disabled>
-          {/* Empty space to balance the layout */}
+            {/* Empty space to balance the layout */}
           </TouchableOpacity>
         </View>
-{/* android test 300 */}
-        <View style={styles.content}>
-          {data?.note?.split("\n").length > 5 ? (
-            <ScrollView style={{ maxHeight: verticalScale(250) }}>
-              <Text style={styles.docTitle}>{data?.admin}</Text>
-              <Text style={styles.docDate}>{data?.date}</Text>
-              <Text style={styles.docDescription}>{data?.note}</Text>
-            </ScrollView>
-          ) : (
-            <>
-              <Text style={styles.docTitle}>{data?.admin}</Text>
-              <Text style={styles.docDate}>{data?.date}</Text>
-              <Text style={styles.docDescription}>{data?.note}</Text>
-            </>
-          )}
-        </View>
-
-        <View style={styles.replyContainer}>
-          <TextInput
-            style={styles.input}
-            placeholder="Type your reply here..."
-            placeholderTextColor="#bbb"
-            value={replyText}
-            onChangeText={setReplyText}
-            multiline
-          />
-          <TouchableOpacity style={styles.submitButton} onPress={submitReply}>
-            <Text style={styles.submitText}>Send Reply</Text>
-          </TouchableOpacity>
-        </View>
-
-        <Modal
-          transparent
-          animationType="fade"
-          visible={modalVisible}
-          onRequestClose={() => setModalVisible(false)}
-        >
-          <View style={styles.modalOverlay}>
-            <View style={styles.modalContainer}>
-              <Text style={styles.modalTitle}>{isSuccess ? "Success" : "Error"}</Text>
-              <Text style={styles.modalMessage}>{modalMessage}</Text>
-              <TouchableOpacity
-                onPress={() => {
-                  setModalVisible(false);
-                  if (isSuccess) {
-                    navigation.navigate("DrawerNavigator", {
-                      screen: "Dashbord",
-                      params: { userId, flag: 1 },
-                    });
-                    
-                  }
-                }}
-                style={styles.modalButton}
-              >
-                <Text style={styles.modalButtonText}>OK</Text>
-              </TouchableOpacity>
-            </View>
+  
+        {/* ✅ Animated Content */}
+        <Animatable.View animation="fadeInUp" duration={600} delay={200} style={{ flex: 1, width: '100%' }}>
+          <View style={styles.content}>
+            {data?.note?.split("\n").length > 5 ? (
+              <ScrollView style={{ maxHeight: verticalScale(250) }}>
+                <Text style={styles.docTitle}>{data?.admin}</Text>
+                <Text style={styles.docDate}>{data?.date}</Text>
+                <Text style={styles.docDescription}>{data?.note}</Text>
+              </ScrollView>
+            ) : (
+              <>
+                <Text style={styles.docTitle}>{data?.admin}</Text>
+                <Text style={styles.docDate}>{data?.date}</Text>
+                <Text style={styles.docDescription}>{data?.note}</Text>
+              </>
+            )}
           </View>
-        </Modal>
+  
+          <View style={styles.replyContainer}>
+            <TextInput
+              style={styles.input}
+              placeholder="Type your reply here..."
+              placeholderTextColor="#bbb"
+              value={replyText}
+              onChangeText={setReplyText}
+              multiline
+            />
+            <TouchableOpacity style={styles.submitButton} onPress={submitReply}>
+              <Text style={styles.submitText}>Send Reply</Text>
+            </TouchableOpacity>
+          </View>
+  
+          <Modal
+            transparent
+            animationType="fade"
+            visible={modalVisible}
+            onRequestClose={() => setModalVisible(false)}
+          >
+            <View style={styles.modalOverlay}>
+              <View style={styles.modalContainer}>
+                <Text style={styles.modalTitle}>{isSuccess ? "Success" : "Error"}</Text>
+                <Text style={styles.modalMessage}>{modalMessage}</Text>
+                <TouchableOpacity
+                  onPress={() => {
+                    setModalVisible(false);
+                    if (isSuccess) {
+                      navigation.navigate("DrawerNavigator", {
+                        screen: "Dashbord",
+                        params: { userId, flag: 1 },
+                      });
+                    }
+                  }}
+                  style={styles.modalButton}
+                >
+                  <Text style={styles.modalButtonText}>OK</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </Modal>
+        </Animatable.View>
+  
       </LinearGradient>
-      </KeyboardAwareScrollView>
-    </SafeAreaView>
+    </KeyboardAwareScrollView>
+  </SafeAreaView>
+  
   );
 };
 
@@ -166,6 +174,7 @@ const styles = ScaledSheet.create({
     flex: 1,
     backgroundColor: "#000",
     paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight || 20 : 0,
+    // paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
   keyboardAwareContainer: {
     flexGrow: 1,
